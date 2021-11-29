@@ -47,7 +47,7 @@
                 @click="onSelect(patient.id, `${patient.surname} ${patient.name}`)"
             >
               <v-list-item-title v-text="`${patient.surname} ${patient.name}`"/>
-              <v-list-item-subtitle v-text="`${patient.debt} $`" />
+              <v-list-item-subtitle v-text="`${patient.debt || 0} $`" />
             </v-list-item-content>
             <DeletePatient :patient-id="patient.id" :fetch-patients="fetchPatients"></DeletePatient>
           </v-list-item>
@@ -161,6 +161,7 @@ export default {
           .catch((error) => {
             console.log(error)
             localStorage.removeItem('token')
+			this.router.push('login')
           });
     },
     onSelect(id, name) {

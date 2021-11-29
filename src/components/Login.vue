@@ -12,8 +12,24 @@
                   dense
                   type="error"
                 >{{ error }}</v-alert>
-                <v-text-field v-model="username" label="Enter your name" name="username" prepend-inner-icon="mdi-email" class="rounded-0" outlined></v-text-field>
-                <v-text-field v-model="password" label="Enter your password" name="password" prepend-inner-icon="mdi-lock" type="password" class="rounded-0" outlined></v-text-field>
+                <v-text-field
+					autofocus
+					v-model="username" 
+					label="Enter your name" 
+					name="username" 
+					prepend-inner-icon="mdi-email" 
+					class="rounded-0" 
+					outlined>
+				</v-text-field>
+                <v-text-field 
+					v-model="password" 
+					label="Enter your password" 
+					name="password" 
+					prepend-inner-icon="mdi-lock" 
+					type="password" 
+					class="rounded-0" 
+					outlined>
+				</v-text-field>
                 <v-btn type="submit" color="secondary" x-large block>Login</v-btn>
               </v-form>
             </v-card-text>

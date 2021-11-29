@@ -81,7 +81,7 @@ export default {
       valid: true,
       operationType: '',
       operationPrice: '',
-      operationTypes: ['Удаление зуба', 'Еще что-то'],
+      operationTypes: ['Удаление зуба', 'Протезирование', 'Пломбирование', 'Имплантация', 'Еще что-то'],
       rules: [
         v => !!v || 'This field is required',
       ],
